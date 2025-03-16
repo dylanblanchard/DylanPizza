@@ -141,6 +141,32 @@
                 font-size: 2rem;
             }
         }
+
+        /* Tooltip for Count Me In! button */
+        #countMeInButton {
+            position: relative;
+        }
+
+        #countMeInButton::after {
+            content: "I haven't figured this part out yet, but SOON.";
+            position: absolute;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.75);
+            color: #fff;
+            padding: 5px;
+            border-radius: 4px;
+            white-space: nowrap;
+            z-index: 10;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+
+        #countMeInButton:hover::after {
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -246,7 +272,7 @@
                     </div>
 
                     <div class="has-text-centered mt-5">
-                        <a href="#" class="button is-primary is-large">
+                        <a id="countMeInButton" class="button is-primary is-large">
                             <span class="icon">
                                 <i class="fas fa-check-circle"></i>
                             </span>
@@ -264,7 +290,7 @@
             <p class="is-size-5">
                 <strong>TIP 2 TIP GRAVEL SWAG</strong> - Summer 2026
             </p>
-            <p>Organized by your adventure-loving friend who wants to do thinks and make cool #mems with ya.</p>
+            <p>Organized by your adventure-loving friend who wants to do things with ya and make cool #mems.</p>
         </div>
     </footer>
 </body>
